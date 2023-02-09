@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'VT323', monospace;
+  color: #39ff14;
+  background-color: black;
+  width: 100%;
+}
+
+header {
+  text-align: center;
+  padding: 2em;
+  font-size: 1.5rem;
+}
+
+main {
+ display: flex;
+ justify-content: center;
+ font-size: 1.5rem;
+ flex-direction: column;
+ align-items: center;
+ margin: auto;
+}
