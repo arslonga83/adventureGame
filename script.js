@@ -1,91 +1,19 @@
+import { adventureData } from './data.js'
+
 const textDisplay= document.querySelector('#textDisplay')
 const input = document.querySelector('#input')
 const speed = 50; 
 input.disabled = true
 let i = 0
-let textIndex = 0
+// let textIndex = 0
 let currentId = 0
 
-const adventureData = [
-  {
-    id: 0,
-    text: 'Welcome the the adventure! You wake up on a deserted beach. You can\'t remember how you got here, but there are bits of driftwood all around, seemingly from a shipwreck. In front of you looms a dense jungle and the shore stretches out as far as you can see in either direction. Do you go "left", "right", or "straight"?', 
-    options: [
-      {
-        choice: 'left',
-        nextId: 1
-      },
-      {
-        choice: 'right', 
-        nextId: 3
-      },
-      {
-        choice: 'straight', 
-        nextId: 2
-      }
-    ]
-  },
-  {
-    id: 1,
-    text: 'You proceed left and come to a rocky outcropping with a lighthouse. You don\'t see anyone around but the light is slowly turning. Do you "investigate" further or "continue" walking?', 
-    options: [
-      {
-        choice: 'left',
-        nextId: 23
-      },
-      {
-        choice: 'right', 
-        nextId: 11
-      },
-      {
-        choice: 'straight', 
-        nextId: 3
-      }
-    ]
-  },{
-    id: 2,
-    text: 'You make slow progress through the dense jungle foliage. The mosquitoes are ravenous and you are feeling worried about the plants you keep brushing against. Do you "keep going" or "retreat"?', 
-    options: [
-      {
-        choice: 'left',
-        nextId: 23
-      },
-      {
-        choice: 'right', 
-        nextId: 11
-      },
-      {
-        choice: 'straight', 
-        nextId: 3
-      }
-    ]
-  },{
-    id: 3,
-    text: 'The beach in this direction stretches on forever with no sign of any people or even animals. As the sun beats down you decide to stop and take a rest. Do you "sit on the beach" or "find a place to hide"?', 
-    options: [
-      {
-        choice: 'left',
-        nextId: 23
-      },
-      {
-        choice: 'right', 
-        nextId: 11
-      },
-      {
-        choice: 'straight', 
-        nextId: 3
-      }
-    ]
-  }
-]
-
-
-const textToPrint = [
-  'Welcome the the adventure! You wake up on a deserted beach. You can\'t remember how you got here, but there are bits of driftwood all around, seemingly from a shipwreck. In front of you looms a dense jungle and the shore stretches out as far as you can see in either direction. Do you go "left", "right", or "straight"?',
-  'You proceed left and come to a rocky outcropping with a lighthouse. You don\'t see anyone around but the light is slowly turning. Do you "investigate" further or "continue" walking?',
-  'You make slow progress through the dense jungle foliage. The mosquitoes are ravenous and you are feeling worried about the plants you keep brushing against. Do you "keep going" or "retreat"?',
-  'The beach in this direction stretches on forever with no sign of any people or even animals. As the sun beats down you decide to stop and take a rest. Do you "sit on the beach" or "find a place to hide"?'
-]
+// const textToPrint = [
+//   'Welcome the the adventure! You wake up on a deserted beach. You can\'t remember how you got here, but there are bits of driftwood all around, seemingly from a shipwreck. In front of you looms a dense jungle and the shore stretches out as far as you can see in either direction. Do you go "left", "right", or "straight"?',
+//   'You proceed left and come to a rocky outcropping with a lighthouse. You don\'t see anyone around but the light is slowly turning. Do you "investigate" further or "continue" walking?',
+//   'You make slow progress through the dense jungle foliage. The mosquitoes are ravenous and you are feeling worried about the plants you keep brushing against. Do you "keep going" or "retreat"?',
+//   'The beach in this direction stretches on forever with no sign of any people or even animals. As the sun beats down you decide to stop and take a rest. Do you "sit on the beach" or "find a place to hide"?'
+// ]
 
 // function displayText() {
 //   textDisplay.innerHTML += `
@@ -95,7 +23,6 @@ const textToPrint = [
 // }
 
 function displayText() {
-  input.disabled = true
   textDisplay.innerHTML += `
     <br></br>
     `
@@ -121,7 +48,9 @@ function typeWriter(text) {
   }
 }
 
-displayText()
+setTimeout(() => {
+  displayText()
+}, 1000)
 
 // input.addEventListener('keydown', (e) => {
 //   if (e.code === 'Enter') {
@@ -147,6 +76,7 @@ input.addEventListener('keydown', (e) => {
           if (option.choice === input.value) {
             currentId = option.nextId
             input.value = ''
+            input.disabled = true
             displayText()
           }
         })
