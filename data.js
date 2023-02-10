@@ -1,7 +1,7 @@
 export const adventureData = [
   {
     id: 0,
-    text: 'Welcome the the adventure! You wake up on a deserted beach. You can\'t remember how you got here, but there are bits of driftwood all around, seemingly from a shipwreck. In front of you looms a dense jungle and the shore stretches out as far as you can see in either direction. Do you go "left", "right", or "straight"?', 
+    text: 'Welcome to the adventure! You wake up on a deserted beach. You can\'t remember how you got here, but there are bits of driftwood all around, seemingly from a shipwreck. In front of you looms a dense jungle and the shore stretches out as far as you can see in either direction. Do you go "left", "right", or "straight"?', 
     options: [
       {
         choice: 'left',
@@ -61,15 +61,15 @@ export const adventureData = [
   },
   {
     id: 4,
-    text: '', 
+    text: 'You find the door unlocked and encounter a tight spiral staircase. Oddly, the stairs lead not only up to where the light is spinning but also down underground...do you walk "up" or "down" the stairs?', 
     options: [
       {
-        choice: '',
-        nextId: 0
+        choice: 'up',
+        nextId: 10
       },
       {
-        choice: '', 
-        nextId: 0
+        choice: 'down', 
+        nextId: 11
       }
     ]
   },
@@ -145,45 +145,37 @@ export const adventureData = [
   },
   {
     id: 10,
-    text: '', 
+    text: 'The staircase continues up to a small room containing the spinning light. It looks like a pretty simple mechanism, and you think you might be able to signal a passing ship for help. Do you "try" to send a signal, or "go back" to the beach to continue exploring?', 
     options: [
       {
-        choice: '',
-        nextId: 0
+        choice: 'try',
+        nextId: 12
       },
       {
-        choice: '', 
+        choice: 'go back', 
         nextId: 0
       }
     ]
   },
   {
     id: 11,
-    text: '', 
+    text: 'As you cautiously take a step, the staircase suddenly becomes a smooth slide and you are propelled downward. The sensation of falling ends with a sudden splash!', 
     options: [
       {
         choice: '',
-        nextId: 0
-      },
-      {
-        choice: '', 
         nextId: 0
       }
     ]
   },
   {
     id: 12,
-    text: '', 
-    options: [
-      {
-        choice: '',
-        nextId: 0
-      },
-      {
-        choice: '', 
-        nextId: 0
-      }
-    ]
+    text: 'You aim the light directly at a passing ship and make what you hope is the pattern for SOS. You are initially excited when the ship turns your way, but you realize your mistake too lake as it crashes into the rocks below. Well, at least now you\'ll have some company!', 
+    // options: [
+    //   {
+    //     choice: '',
+    //     nextId: 100
+    //   }
+    // ]
   },
   {
     id: 13,
@@ -298,17 +290,7 @@ export const adventureData = [
     ]
   },
   {
-    id: 21,
-    text: '', 
-    options: [
-      {
-        choice: '',
-        nextId: 0
-      },
-      {
-        choice: '', 
-        nextId: 0
-      }
-    ]
+    id: 100,
+    text: 'Thanks for playing!', 
   }
 ]

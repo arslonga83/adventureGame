@@ -72,14 +72,16 @@ input.addEventListener('keydown', (e) => {
   if (e.code === 'Enter') {
     adventureData.map(data => {
       if (data.id === currentId) {
-        data.options.map(option => {
-          if (option.choice === input.value) {
-            currentId = option.nextId
-            input.value = ''
-            input.disabled = true
-            displayText()
-          }
-        })
+        if (data.options) {
+          data.options.map(option => {
+            if (option.choice === input.value) {
+              currentId = option.nextId
+              input.value = ''
+              input.disabled = true
+              displayText()
+            }
+          })
+        }
       }
     })
   }
