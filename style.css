@@ -29,7 +29,7 @@ header {
 .textDisplay {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 0 auto 50vh;
   width: 400px;
 } 
 
@@ -43,4 +43,8 @@ input {
   text-align: center;
   border: none;
   outline: none;
+}
+
+.buffer {
+  height: 25vh;
 }

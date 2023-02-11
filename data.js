@@ -1,7 +1,7 @@
 export const adventureData = [
   {
     id: 0,
-    text: 'Welcome to the adventure! You wake up on a deserted beach. You can\'t remember how you got here, but there are bits of driftwood all around, seemingly from a shipwreck. In front of you looms a dense jungle and the shore stretches out as far as you can see in either direction. Do you go "left", "right", or "straight"?', 
+    text: 'You can\'t remember how you got here, but there are bits of driftwood all around, seemingly from a shipwreck. In front of you looms a dense jungle and the shore stretches out as far as you can see in either direction. Do you go "left", "right", or "straight"?', 
     options: [
       {
         choice: 'left',
@@ -41,21 +41,21 @@ export const adventureData = [
       },
       {
         choice: 'retreat', 
-        nextId: 7
+        nextId: 0
       }
     ]
   },
   {
     id: 3,
-    text: 'The beach in this direction stretches on forever with no sign of any people or even animals. As the sun beats down you decide to stop and take a rest. Do you "sit on the beach" or "find a place to hide"?', 
+    text: 'The beach in this direction stretches on forever with no sign of any people or even animals. As the sun beats down you decide to stop and take a rest. Do you "sit on the beach" or "keep going"?', 
     options: [
       {
         choice: 'sit on the beach',
         nextId: 8
       },
       {
-        choice: 'find a place to hide', 
-        nextId: 9
+        choice: 'keep going', 
+        nextId: 3
       }
     ]
   },
@@ -75,56 +75,42 @@ export const adventureData = [
   },
   {
     id: 5,
-    text: '', 
+    text: 'The beach continues for a ways until a rocky cliff blocks your path. Do you attempt to "climb" or head into the "jungle"?', 
     options: [
       {
-        choice: '',
-        nextId: 0
+        choice: 'climb',
+        nextId: 13
       },
       {
-        choice: '', 
-        nextId: 0
+        choice: 'jungle', 
+        nextId: 2
       }
     ]
   },
   {
     id: 6,
-    text: '', 
+    text: 'Tired and itchy, you finally come upon what seems to be the remains of an ancient temple. You can\'t make out any of the writing, but even though overgrown with jungle plants, the site itself is in really good condition. There are two obvious doors, one at the "top" and one leading "underground". Which do you choose? ', 
     options: [
       {
-        choice: '',
-        nextId: 0
+        choice: 'top',
+        nextId: 7
       },
       {
-        choice: '', 
-        nextId: 0
+        choice: 'underground', 
+        nextId: 11
       }
     ]
   },
   {
     id: 7,
-    text: '', 
-    options: [
-      {
-        choice: '',
-        nextId: 0
-      },
-      {
-        choice: '', 
-        nextId: 0
-      }
-    ]
+    text: 'As you step inside, you have to shield your eyes from the glimmering reflection of gold that greets you. The room is filled to the ceiling with treasure. You may be stuck on this mysterious island forever, but at least you can retire in style!', 
   },
   {
     id: 8,
-    text: '', 
+    text: 'As the sun beats down from overhead, so start to wish you had washed up with an umbrella, or at least something to drink. You can no longer resist the urge to sleep, and lay your head down in the soft sand. "continue"', 
     options: [
       {
-        choice: '',
-        nextId: 0
-      },
-      {
-        choice: '', 
+        choice: 'continue',
         nextId: 0
       }
     ]
@@ -159,34 +145,25 @@ export const adventureData = [
   },
   {
     id: 11,
-    text: 'As you cautiously take a step, the staircase suddenly becomes a smooth slide and you are propelled downward. The sensation of falling ends with a sudden splash!', 
+    text: 'As you cautiously take a step, the staircase suddenly becomes a smooth slide and you are propelled downward. The sensation of falling ends with a sudden splash! "continue".', 
     options: [
       {
-        choice: '',
+        choice: 'continue',
         nextId: 0
       }
     ]
   },
   {
     id: 12,
-    text: 'You aim the light directly at a passing ship and make what you hope is the pattern for SOS. You are initially excited when the ship turns your way, but you realize your mistake too lake as it crashes into the rocks below. Well, at least now you\'ll have some company!', 
-    // options: [
-    //   {
-    //     choice: '',
-    //     nextId: 100
-    //   }
-    // ]
+    text: 'You aim the light directly at a passing ship and make what you hope is the pattern for SOS. You are initially excited when the ship turns your way, but you realize your mistake too late as it crashes into the rocks below. Well, at least now you\'ll have some company!', 
+    endPoint: true
   },
   {
     id: 13,
-    text: '', 
+    text: 'The climbing is easy going at first but soon there are fewer handholds and the ones you can find are slippery. At one particularly tricky part you make a desparate leap for a ledge but it collapses under your wait. You free fall for a few seconds before landing with a splash. "continue".', 
     options: [
       {
-        choice: '',
-        nextId: 0
-      },
-      {
-        choice: '', 
+        choice: 'continue',
         nextId: 0
       }
     ]
@@ -288,9 +265,5 @@ export const adventureData = [
         nextId: 0
       }
     ]
-  },
-  {
-    id: 100,
-    text: 'Thanks for playing!', 
   }
 ]
