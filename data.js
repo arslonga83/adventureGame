@@ -107,7 +107,7 @@ export const adventureData = [
   },
   {
     id: 8,
-    text: 'As the sun beats down from overhead, so start to wish you had washed up with an umbrella, or at least something to drink. You can no longer resist the urge to sleep, and lay your head down in the soft sand. "continue"', 
+    text: 'As the sun beats down from overhead, you start to wish you had washed up with an umbrella, or at least something to drink. You can no longer resist the urge to sleep, and lay your head down in the soft sand. "continue"', 
     options: [
       {
         choice: 'continue',
