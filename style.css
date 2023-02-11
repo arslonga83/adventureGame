@@ -52,3 +52,7 @@ input {
 .buffer {
   height: 25vh;
 }
+
+.end {
+  text-align: center;
+}

@@ -13,26 +13,31 @@ function displayText() {
     `
     adventureData.map(data => {
       if (data.id === currentId) {
-        typeWriter(data.text)
+        typeWriter(data.text, data.options)
       }
     })
 }
 
-function typeWriter(text) {
+function typeWriter(text, options) {
   if (i < text.length) {
     textDisplay.innerHTML += text.charAt(i);
     i++;
     window.scrollBy(0, 1)
     setTimeout(() => {
-      typeWriter(text)
+      typeWriter(text, options)
     }, speed);
   }
   else {
-    i = 0
-    input.disabled = false
-    input.focus()
-  }
+    if (options.length > 0) {
+      i = 0
+      input.disabled = false
+      input.focus()
+    } else {
+      textDisplay.innerHTML += `<br></br><div class="end">|-----THE END-----|</div>`
+    } 
+  } 
 }
+
 
 setTimeout(() => {
   displayText()
@@ -57,4 +62,5 @@ input.addEventListener('keydown', (e) => {
     })
   }
 })
+
 

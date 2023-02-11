@@ -104,6 +104,9 @@ export const adventureData = [
   {
     id: 7,
     text: 'As you step inside, you have to shield your eyes from the glimmering reflection of gold that greets you. The room is filled to the ceiling with treasure. You may be stuck on this mysterious island forever, but at least you can retire in style!', 
+    options: [
+      
+    ]
   },
   {
     id: 8,
@@ -156,7 +159,8 @@ export const adventureData = [
   {
     id: 12,
     text: 'You aim the light directly at a passing ship and make what you hope is the pattern for SOS. You are initially excited when the ship turns your way, but you realize your mistake too late as it crashes into the rocks below. Well, at least now you\'ll have some company!', 
-    endPoint: true
+    options: [
+    ]
   },
   {
     id: 13,
